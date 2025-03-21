@@ -16,4 +16,8 @@ return {
       { '<leader>lg', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
     },
   },
+  {
+    'numToStr/Comment.nvim',
+    opts = {},
+  },
 }
