@@ -156,7 +156,7 @@ require('lazy').setup({
           sorting_strategy = 'ascending',
           layout_config = {
             prompt_position = 'top',
-            preview_width = 0.6,
+            -- preview_width = 0.6,
             horizontal = {
               width = 0.75,
               height = 0.30,
@@ -624,8 +624,7 @@ require('lazy').setup({
   },
 
   -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
