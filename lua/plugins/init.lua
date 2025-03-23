@@ -1,5 +1,6 @@
 return {
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  'mbbill/undotree',
   {
     'kdheepak/lazygit.nvim',
     lazy = true,

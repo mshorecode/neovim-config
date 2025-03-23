@@ -9,14 +9,26 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
-  { import = 'plugins' },
-  { import = 'plugins.formatting' },
-  { import = 'plugins.ui' },
-  { import = 'plugins.util' },
-  { import = 'plugins.coding' },
-  { import = 'plugins.lsp' },
-}, {
+require('lazy').setup {
+  spec = {
+    { import = 'plugins' },
+    { import = 'plugins.formatting' },
+    { import = 'plugins.ui' },
+    { import = 'plugins.util' },
+    { import = 'plugins.coding' },
+    { import = 'plugins.lsp' },
+  },
+  defaults = {
+    lazy = false,
+    version = false,
+  },
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false,
+  },
   ui = {
     icons = vim.g.have_nerd_font and {} or {
       cmd = '⌘',
@@ -33,5 +45,9 @@ require('lazy').setup({
       task = '📌',
       lazy = '💤 ',
     },
+    size = {
+      width = 0.75,
+      height = 0.7,
+    },
   },
-})
+}

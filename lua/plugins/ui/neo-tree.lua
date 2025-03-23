@@ -12,23 +12,6 @@ return {
   },
   opts = {
     source_selector = {
-      winbar = true, -- toggle to show selector on winbar
-      statusline = false, -- toggle to show selector on statusline
-      show_scrolled_off_parent_node = false,
-      sources = {
-        {
-          source = 'filesystem',
-          display_name = ' 󰉓 Files ',
-        },
-        {
-          source = 'buffers',
-          display_name = ' 󰈚 Buffers ',
-        },
-        {
-          source = 'git_status',
-          display_name = ' 󰊢 Git ',
-        },
-      },
       content_layout = 'start',
       tabs_layout = 'equal',
       truncation_character = '…',
@@ -63,5 +46,6 @@ return {
         },
       },
     },
+    popup_border_style = 'single',
   },
 }
